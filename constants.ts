@@ -1,0 +1,51 @@
+export interface MessageData {
+  id: number;
+  name: string;
+  message: string;
+  tone: 'love' | 'strength' | 'hope';
+}
+
+export const APP_DATA = {
+  title: "Un cielo lleno de vos",
+  subtitle: "Mensajes del equipo para Sandra",
+  finalPhrase: "Estamos con vos",
+};
+
+// Data parsed from the provided CSV
+export const MESSAGES: MessageData[] = [
+  { id: 1, name: "Javier González Castaño", message: "Hola Sandra! Te mandamos un abrazo fuerte y mucha fuerza desde Canarias! VAS A GANAR LA BATALLA!!", tone: "strength" },
+  { id: 2, name: "Pere Sastre", message: "Estimada amiga tu pots amb això i molt mes, dona forta com poques he conegut. T'anyoram", tone: "strength" },
+  { id: 3, name: "Vicky Hernández", message: "Nena, creo que ya nos lo hemos dicho todo pero por si hay dudas aún...... LO VAS A CONSEGUIR, ERES MUY FUERTE Y VALIENTE y recuerda, las navidades del 2027 estaremos recordando este momento. Contando los días para esa visita a BCN. Te quiero!!! A por todas!!!!!", tone: "love" },
+  { id: 4, name: "Simon", message: "Sandra, estamos todos haciendo mucha fuerza por vos. Sabemos lo enorme que viene siendo esta batalla y lo admirable que es cómo la estás enfrentando. Ahora arranca una etapa nueva en Barcelona, y ojalá el trasplante sea ese empujón que te acerque cada vez más a estar bien.\n\nQuedate tranquila que no estás sola: todo el equipo te banca, te piensa y te acompaña desde acá. Tenés un montón de gente tirándote buena energía y esperando verte volver con toda la fuerza que te caracteriza.\n\nMucho ánimo, de verdad. Pasito a pasito, ya falta menos. Un abrazo enorme", tone: "hope" },
+  { id: 5, name: "IVÁN OLIVER", message: "Desde el departamento de PRL, enviarte muchos ánimos y mucha fuerza en este camino. Deseamos que todo salga bien y que te vaya muy bonito. Un fuerte abrazo.", tone: "hope" },
+  { id: 6, name: "Susana Planas", message: "Estiimada Sandra,\nEt desitjo una ràpida recuperació i molts ànims! Va ser genial veure't a l'aeroport l'altre dia!! Quan estiguis millor esper que ens podem ajuntar per dinar o colque cosa que te trob a faltar a l'oficina! FORÇAAAA!!!\nUna abraçada molt forta\nSusana", tone: "love" },
+  { id: 7, name: "Gerardo Díaz", message: "Apoyo sincero para este reto. Te mando lindas energias.\nUn caluroso apoyo de un compañero de trabajo.", tone: "hope" },
+  { id: 8, name: "Paula Bonnin", message: "Sandra mucha fuerza y ánimos para afrontar esta situación que tienes por delante.\n\nTe mando un fuerte abrazo.", tone: "strength" },
+  { id: 9, name: "Daniel Armas", message: "Hola Sandra, quería darte mucha fuerza en esta etapa de tu vida que estás afrontando, estas batallas solo se las dan a las más fuertes, y no dudo de que tú lo seas, así que no dejes de luchar, que es la mejor herramienta para salir siempre adelante y más en estas situaciones. Yo sé como son en parte , ya que lo he vivido con familiares, y el ánimo y las ganas son las principales armas, así que te quiero ver arriba, que así seguro que lo superarás. Un abrazo fuerte desde Canarias.", tone: "strength" },
+  { id: 10, name: "Marta Lopez", message: "Te mando un abrazo lleno de fuerza y cariño para acompañarte en esta nueva etapa.", tone: "love" },
+  { id: 11, name: "Yaiza", message: "Cuento las horas para volver a reír contigo en la oficina, para tomar un café en la cantina, o simplemente para recordar nuestro pasado glorioso en aquellas empresas que nos prometieron un futuro prometedor con recursos invisibles, besugos uniformados, horas infinitas...pero que sin saberlo, hoy les podemos dar las GRACIAS por haberse convertido en ese nexo que ha permitido conocernos. Ya no queda nada...estás en la recta final. Eres una ganadora, una MUJERONA, toda mi fuerza para ti. Con mucho cariño Yaiza.", tone: "love" },
+  { id: 12, name: "Rosana", message: "Muchísimo Ánimo! Estamos todos aquí apoyándote para darte toda la fuerza del mundo! Recupérate y vuelve pronto que te echamos de menos", tone: "strength" },
+  { id: 13, name: "María Antonia Oliver", message: "Sandra, muchos ánimos. Tú puedes!!!! Todo irá bien. Nos vemos pronto! Un besote", tone: "hope" },
+  { id: 14, name: "Daniela", message: "Sandra:\n\nHoy quiero enviarte mucha energía positiva y un abrazo enorme. Deseo que esto pase pronto para volver a verte por la oficina, tan radiante e iluminada como siempre. Te mando mucho ánimo y los mejores deseos para tu pronta recuperación.\n\nCuidate mucho y aquí estamos esperándote =)", tone: "love" },
+  { id: 15, name: "Mercedes", message: "Sandrita, ¡ya queda menos para que estés a tope!\nTe echamos de menos INFINITO\nUn besote muy muy muy fuerte", tone: "love" },
+  { id: 16, name: "Ander Aguirre", message: "Te mando toda la fuerza del mundo Sandra, muchos ánimos y seguro que esta etapa de la vida la superas como una campeona. Después de eso toda maratón será poco para ti.", tone: "strength" },
+  { id: 17, name: "Neus", message: "Molts d'ànims Sandra, t'enviam tota la nostra energia i força, sabem que tot anirà bé. Una aferrada enorme i beso molt molt molt fort!", tone: "love" },
+  { id: 18, name: "Leyre", message: "Un abrazo muy grande Sandra; estoy segura de que nos veremos muy prontito por la ofi :)", tone: "hope" },
+  { id: 19, name: "Laura Lobo", message: "Sandra, este es el comienzo de un nuevo capítulo y para él, te envío mucha energía y fuerza!!\n\nEstoy segura de que nos veremos muuy pronto :)\n\nUn fuerte abrazo,\nLaura Lobo", tone: "hope" },
+  { id: 20, name: "Antonia Fiol", message: "El proceso se convierte en un viaje difícil, donde cada día es un conflicto que se libra con amor y paciencia, aunque el camino sea incierto, la motivación nace del alma y cada paso, por pequeño que sea, es un canto a la vida, con cariño de Antonia Fiol", tone: "love" },
+  { id: 21, name: "Loileth", message: "Amiga, mis mejores deseos para esta fase de tratamiento. Estamos seguros que estarás de vuelta pronto!!! Pon toda tu fuerza en tu recuperación!!!!! Un abrazo grande!!!", tone: "strength" },
+  { id: 22, name: "Silvia Cazorla Reche", message: "Hola bonita! Te envío todo mi cariño y mucha energía positiva para que empieces el tratamiento en Barcelona cargada de buenas vibraciones. Será un camino duro, pero tienes que ser muy fuerte y enfocarte en el resultado. Estoy segura de que te va a ir fenomenal y que dentro de unos meses estaremos celebrando tu recuperación. ¡Mucho ánimo bombón! Te envío un fortísimo abrazo, Silvia Cazorla", tone: "love" },
+  { id: 23, name: "Patricia Espín", message: "Sandra, eres una persona increíblemente fuerte y valiente, dos virtudes muy importantes para el camino que vas a empezar en Barcelona.\nTe mando todo mi amor y apoyo para esta etapa. Recuperarte tiene que ser tu única prioridad ahora mismo.\n\nUn abrazo enorme", tone: "strength" },
+  { id: 24, name: "Marta Borrás", message: "Muchísimo ánimo Sandra!!! Todo irá bien, te esperamos en la ofi más fuerte que nunca!!! Un beso enorme :)", tone: "hope" },
+  { id: 25, name: "Vero", message: "Vamos, campeona! Que si hay alguien que puede con esto eres tú! Te admiramos y te enviamos todas las fuerzas del universo para que estés pronto de vuelta.", tone: "strength" },
+  { id: 26, name: "Mª Jesús", message: "Hola Sandra! Te mando toda mi energía positiva, estamos contigo en cada paso! Un abrazo fuerte", tone: "love" },
+  { id: 27, name: "MAR VINENT", message: "No conec persona amb més força que TU! Cap endavant i amb més força que mai!!!! Vendrem molt prest a BCN a estar amb tu!!! T'estimam i t'enyoram cada dia.", tone: "love" },
+  { id: 28, name: "Lorena Rizquez", message: "Sandra, que sepas que te tenemos muy presente cada día en la oficina, ¡tu ausencia se hace notar! Te mando mucha mucha mucha fuerza en esta nueva etapa en el camino de la recuperación y un abrazo enorme de Manacor hasta Barcelona ❤️ Nos vemos muy pronto🥰", tone: "love" },
+  { id: 29, name: "Magda Flores", message: "Querida Sandrita, desde México, te mandamos mucha luz, mucha fuerza y nuestras oraciones, para que este procedimiento que vas a realizar, sea todo un éxito y pronto te reincorpores con nosotros. Por mi parte estás en mis oraciones y te deseo que todo vaya bien y seguiré rezando para Dios esté contigo y no te suelte de su mano. Un abrazo fuertísimo, te queremos mucho", tone: "love" },
+  { id: 30, name: "Merian", message: "Querida Sandra 💛\n\nQuiero que sepas que estoy pensando mucho en ti en esta etapa tan importante. 💪✨ Sé que eres fuerte y valiente, y estoy segura de que vas a superar esta batalla.\nTe envío todo mi cariño, energía positiva y abrazos virtuales para que este trasplante sea un éxito y pronto estés recuperada. 💖🤗\n\n¡Mucho ánimo y espero verte pronto! 💛", tone: "love" },
+  { id: 31, name: "Laura Orellana", message: "Aunque coincide muy poco tiempo, te deseo lo mejor de lo mejor durante todo el camino, un abrazo enorme!!!", tone: "hope" },
+  { id: 32, name: "Patri", message: "Querida Sandra, ¡Te echo de menos! Todo mi amor y luz para este siguiente reto, volveremos a viajar juntas, comentar libros y reirnos. ¡¡Un abrazo gigante!!", tone: "love" },
+  { id: 33, name: "Carmen Salmán", message: "Eres una persona increíblemente fuerte y estoy segura de que superarás esto pronto. Quiero que sepas que tienes todo mi apoyo y estoy aquí para lo que necesites: una llamada, o simplemente escuchar. ¡Te mando toda mi fuerza y animo!", tone: "strength" },
+  { id: 34, name: "Lisa", message: "Sandra! A por ello! Mucho es lo recorrido y ahora el gran paso! Te mandamos todo el apoyo y la fuerza! Estás muy presente por aquí, te esperamos de vuelta! Un fuerte abrazo lleno de cariño!", tone: "strength" },
+  { id: 35, name: "Eva Z.", message: "Querido Sandra, deseando que pronto te encuentres mucho mejor. Estaré pensando en ti, acompañándote desde la distancia y enviándote mucha energía de la buena.\n\n Un abrazo grande, lleno de fuerza y cariño ♥", tone: "love" }
+];

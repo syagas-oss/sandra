@@ -7,6 +7,10 @@
     <meta name="description" content="Mensajes del equipo para Sandra" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Babel for compiling TSX in the browser -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
     <style>
       body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background-color: #0f172a; }
       body { font-family: 'Montserrat', sans-serif; }
@@ -22,22 +26,32 @@
         background: rgba(255, 255, 255, 0.3);
         border-radius: 4px;
       }
+      
+      /* Disable selection on body generally, enable specific areas */
+      .select-none { user-select: none; -webkit-user-select: none; }
     </style>
-  <script type="importmap">
+    
+    <script type="importmap">
 {
   "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "@react-three/drei": "https://aistudiocdn.com/@react-three/drei@^10.7.7",
+    "react": "https://esm.sh/react@18.2.0",
+    "react/client": "https://esm.sh/react-dom@18.2.0/client",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "three": "https://esm.sh/three@0.160.0",
+    "@react-three/fiber": "https://esm.sh/@react-three/fiber@8.15.14?external=react,react-dom,three",
+    "@react-three/drei": "https://esm.sh/@react-three/drei@9.99.0?external=react,react-dom,three,@react-three/fiber",
+    "@react-three/postprocessing": "https://esm.sh/@react-three/postprocessing@2.16.0?external=react,react-dom,three,@react-three/fiber",
+    "uuid": "https://esm.sh/uuid@9.0.1",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "three": "https://aistudiocdn.com/three@^0.181.2",
-    "@react-three/fiber": "https://aistudiocdn.com/@react-three/fiber@^9.4.0",
-    "@react-three/postprocessing": "https://aistudiocdn.com/@react-three/postprocessing@^3.0.4"
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
   }
 }
 </script>
-</head>
+  </head>
   <body>
     <div id="root"></div>
+    
+    <!-- Entry point -->
+    <script type="text/babel" data-type="module" src="./index.tsx"></script>
   </body>
 </html>

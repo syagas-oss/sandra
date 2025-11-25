@@ -219,7 +219,8 @@ const Constellation: React.FC<ConstellationProps> = ({ isFormed, onMessageSelect
 
 const App: React.FC = () => {
   const [started, setStarted] = useState(false);
-  const [selectedMessage, setSelectedMessage] = useState<MessageData | null>(null);
+  // REMOVED explicit generic type <MessageData | null> here to avoid ReferenceError in browser Babel
+  const [selectedMessage, setSelectedMessage] = useState(null);
   const [viewedCount, setViewedCount] = useState(0);
   const [showFinal, setShowFinal] = useState(false);
 

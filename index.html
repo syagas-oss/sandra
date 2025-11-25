@@ -11,6 +11,11 @@
     <!-- Babel for compiling TSX in the browser -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
+    <!-- Shim for process.env.NODE_ENV required by some React libs in browser -->
+    <script>
+      window.process = { env: { NODE_ENV: 'production' } };
+    </script>
+
     <style>
       body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background-color: #0f172a; }
       body { font-family: 'Montserrat', sans-serif; }
@@ -36,6 +41,7 @@
   "imports": {
     "react": "https://esm.sh/react@18.2.0",
     "react/client": "https://esm.sh/react-dom@18.2.0/client",
+    "react-dom": "https://esm.sh/react-dom@18.2.0",
     "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
     "three": "https://esm.sh/three@0.160.0",
     "@react-three/fiber": "https://esm.sh/@react-three/fiber@8.15.14?external=react,react-dom,three",
@@ -51,7 +57,7 @@
   <body>
     <div id="root"></div>
     
-    <!-- Entry point -->
-    <script type="text/babel" data-type="module" src="./index.tsx"></script>
+    <!-- Entry point: Added presets to ensure TSX compiles correctly -->
+    <script type="text/babel" data-type="module" data-presets="react,typescript" src="./index.tsx"></script>
   </body>
 </html>
